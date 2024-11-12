@@ -48,6 +48,8 @@ class InputState(rx.State):
     time = ""
     access = ""
     preference = ""
+    is_uploaded: bool = False
+    upload_text: str = "Upload"
 
     def update_height(self, value):
         self.height = value
@@ -108,9 +110,12 @@ class InputState(rx.State):
             # Save the file.
             with outfile.open("wb") as file_object:
                 file_object.write(upload_data)
+        self.is_uploaded = True
+        self.upload_text = "Uploaded, Thank you!"
     
     def convertToJson(self):
-        
+        self.is_uploaded = False
+        self.upload_text = "Upload"
         def csv_to_string(csv_file_path):
             with open(csv_file_path, 'r') as file:
                 csv_reader = csv.reader(file)
@@ -217,18 +222,21 @@ def image_upload():
         spacing="3",
     )
 """
-color = "rgb(107,99,246)"
+active_border_color = f"1px solid {rx.color('accent', 6)}"  # Active color
+inactive_border_color = f"1px solid {rx.color('gray', 6)}"
+color = "rgb(128, 128, 128)"
 
 def csv_upload():
     return rx.vstack(
             rx.upload(
                 rx.vstack(
-                    rx.button(
-                        "Select File",
-                        color=color,
-                        bg="white",
-                        border=f"1px solid {color}",
-                    ),
+                    # rx.button(
+                    #     "Select File",
+                    #     color=inactive_border_color,
+                    #     bg="black",
+                    #     border=f"1px solid {inactive_border_color}",
+                    #     align="center"
+                    # ),
                     rx.text(
                         "Drag and drop files here or click to select files"
                     ),
@@ -243,15 +251,16 @@ def csv_upload():
                 )
             ),
             rx.button(
-                "Upload",
+                InputState.upload_text,
                 on_click=InputState.handle_upload(
-                    rx.upload_files(upload_id="upload1")
+                    rx.upload_files(upload_id="upload1"),
                 ),
+                style=button_style(InputState.is_uploaded)
             ),
             padding="5em",
         )
 
-@template(route="/scanner", title="Scanner")
+@template(route="/scanner", title="Upload section")
 def scanner() -> rx.Component:
     """The scanner page.
 
@@ -265,8 +274,8 @@ def scanner() -> rx.Component:
     upload_section = csv_upload()
 
     return rx.vstack(
-        rx.heading("Welcome to the Body Scanner", size="6", align="center"),
-        rx.text("Please enter your measurements below:", align="center"),
+        rx.heading("Welcome to the Upload Section", size="6", align="center"),
+        rx.text("Please enter your information below:", align="center"),
         upload_section,
         measurements_section,
         rx.hstack(

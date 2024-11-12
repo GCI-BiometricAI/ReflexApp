@@ -59,7 +59,7 @@ def Schedule() -> rx.Component:
     # Return the constructed components
     return rx.vstack(
         rx.heading("Schedule", size="6", align="center", style={"width": "100%"}),
-        refresh_button,
+        # refresh_button,
         *day_components,
         spacing="5",
         style={"width": "100%"},
