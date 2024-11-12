@@ -1,0 +1,17 @@
+{
+    "name": "Brandon",
+    "weight": "70",
+    "height": "180",
+    "age": "19",
+    "sex": "Male",
+    "shoulder_width": -19.54285714285714,
+    "hip_width": -10.799999999999999,
+    "bmi": 21.604938271604937,
+    "shoulder_hip_ratio": 1.9,
+    "goals": "lose weight",
+    "problems": "hamstring",
+    "experince": "6 years",
+    "time": "7 days",
+    "access": "all",
+    "preference": "any"
+}
