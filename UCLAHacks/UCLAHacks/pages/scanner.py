@@ -41,7 +41,7 @@ class InputState(rx.State):
     age: str = ""
     image: bool = False
     sex: str = ""
-    name: str = ""
+    description: str = ""
     goals = ""
     problems = ""
     experince = ""
@@ -69,8 +69,8 @@ class InputState(rx.State):
     def update_image(self, file):
         self.image = file
     
-    def updateName(self, value):
-        self.name=value
+    def updateDescription(self, value):
+        self.description=value
     
     def updateCSV(self, value):
         self.csv = value
@@ -128,7 +128,7 @@ class InputState(rx.State):
         
         data = {
             "csv": csv_string,
-            "name": self.name,
+            "description": self.description,
             "weight": self.weight,
             "height": self.height,
             "age": self.age,
@@ -160,8 +160,8 @@ def measurements():
     return rx.hstack(
         rx.vstack(
             rx.hstack(
-                rx.text("Name : ", align="right", width="100px"),
-                rx.text_area(placeholder="First Last", style=text_area_style, width="200px", on_change=InputState.updateName),
+                rx.text("Workout Description : ", align="right", width="100px"),
+                rx.text_area(placeholder="e.g., 100m repeats", style=text_area_style, width="200px", on_change=InputState.updateDescription),
                 spacing="3"
             ),
             rx.hstack(
@@ -187,8 +187,8 @@ def measurements():
         ),
         rx.vstack(
             rx.hstack(
-                rx.text("Any Potential Isses:", align="right", width="100px"),
-                rx.text_area(placeholder="e.g., sprained ankle", style=text_area_style, width="200px", on_change=InputState.updateProblems),
+                rx.text("Pain Feedback:", align="right", width="100px"),
+                rx.text_area(placeholder="e.g., hamstring pain", style=text_area_style, width="200px", on_change=InputState.updateProblems),
                 spacing="3"
             ),
             rx.hstack(

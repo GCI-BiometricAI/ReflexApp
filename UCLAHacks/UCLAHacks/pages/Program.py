@@ -64,7 +64,7 @@ class AIState(rx.State):
             system_instruction = f"""Generate a 7-day workout plan based on the following user data:
 {{
     "csv": "{data['csv']}"
-    "name": "{data['name']}",
+    "workout description": "{data['description']}",
     "weight": "{data['weight']}",
     "height": "{data['height']}",
     "age": "{data['age']}",
