@@ -1,25 +1,112 @@
 {
     "Day 1": {
-        "Focus": "Upper Body Strength",
+        "Focus": "Speed and Strength Training",
         "Exercises": [
             {
-                "Name": "Bench Press",
+                "Name": "Warm-up",
+                "Sets": 1,
+                "Reps": "5-10 minutes",
+                "Rest": "0 seconds",
+                "Intensity": "Light cardio, such as jogging or jumping jacks"
+            },
+            {
+                "Name": "Sprints",
+                "Sets": 6,
+                "Reps": "100 meters",
+                "Rest": "2 minutes",
+                "Intensity": "High"
+            },
+            {
+                "Name": "Squats",
                 "Sets": 3,
                 "Reps": "8-12",
                 "Rest": "60 seconds",
                 "Intensity": "Moderate"
             },
             {
-                "Name": "Overhead Press",
+                "Name": "Deadlifts",
                 "Sets": 3,
-                "Reps": "8-12",
+                "Reps": "5-8",
                 "Rest": "60 seconds",
                 "Intensity": "Moderate"
             },
             {
-                "Name": "Bent-Over Rows",
+                "Name": "Hamstring stretches",
                 "Sets": 3,
-                "Reps": "8-12",
+                "Reps": "30 seconds",
+                "Rest": "30 seconds",
+                "Intensity": "Low"
+            },
+            {
+                "Name": "Cool-down",
+                "Sets": 1,
+                "Reps": "5-10 minutes",
+                "Rest": "0 seconds",
+                "Intensity": "Light cardio, such as walking"
+            }
+        ]
+    },
+    "Day 2": {
+        "Focus": "Active Recovery and Core",
+        "Exercises": [
+            {
+                "Name": "Light jog",
+                "Sets": 1,
+                "Reps": "20-30 minutes",
+                "Rest": "N/A",
+                "Intensity": "Low"
+            },
+            {
+                "Name": "Plank",
+                "Sets": 3,
+                "Reps": "30-60 seconds",
+                "Rest": "30 seconds",
+                "Intensity": "Moderate"
+            },
+            {
+                "Name": "Crunches",
+                "Sets": 3,
+                "Reps": "15-20",
+                "Rest": "30 seconds",
+                "Intensity": "Moderate"
+            },
+            {
+                "Name": "Russian twists",
+                "Sets": 3,
+                "Reps": "15-20",
+                "Rest": "30 seconds",
+                "Intensity": "Moderate"
+            },
+            {
+                "Name": "Leg raises",
+                "Sets": 3,
+                "Reps": "15-20",
+                "Rest": "30 seconds",
+                "Intensity": "Moderate"
+            }
+        ]
+    },
+    "Day 3": {
+        "Focus": "Speed and Strength Training",
+        "Exercises": [
+            {
+                "Name": "Warm-up",
+                "Sets": 1,
+                "Reps": "5-10 minutes",
+                "Rest": "0 seconds",
+                "Intensity": "Light cardio, such as jogging or jumping jacks"
+            },
+            {
+                "Name": "Interval running",
+                "Sets": 4,
+                "Reps": "400 meters",
+                "Rest": "90 seconds",
+                "Intensity": "High"
+            },
+            {
+                "Name": "Lunges",
+                "Sets": 3,
+                "Reps": "8-12 per leg",
                 "Rest": "60 seconds",
                 "Intensity": "Moderate"
             },
@@ -29,154 +116,24 @@
                 "Reps": "As many as possible",
                 "Rest": "60 seconds",
                 "Intensity": "Moderate"
-            }
-        ]
-    },
-    "Day 2": {
-        "Focus": "Lower Body Strength and Core",
-        "Exercises": [
-            {
-                "Name": "Squats",
-                "Sets": 3,
-                "Reps": "8-12",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
             },
             {
-                "Name": "Romanian Deadlifts (RDLs)",
+                "Name": "Hamstring stretches",
                 "Sets": 3,
-                "Reps": "10-15",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
+                "Reps": "30 seconds",
+                "Rest": "30 seconds",
+                "Intensity": "Low"
             },
             {
-                "Name": "Walking Lunges",
-                "Sets": 3,
-                "Reps": "10-15 per leg",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Plank",
-                "Sets": 3,
-                "Reps": "30-60 seconds",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            }
-        ]
-    },
-    "Day 3": {
-        "Focus": "Cardio and Core",
-        "Exercises": [
-            {
-                "Name": "Running",
+                "Name": "Cool-down",
                 "Sets": 1,
-                "Reps": "30 minutes",
-                "Rest": "N/A",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Bicycle Crunches",
-                "Sets": 3,
-                "Reps": "15-20",
-                "Rest": "45 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Russian Twists",
-                "Sets": 3,
-                "Reps": "15-20 per side",
-                "Rest": "45 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Leg Raises",
-                "Sets": 3,
-                "Reps": "15-20",
-                "Rest": "45 seconds",
-                "Intensity": "Moderate"
+                "Reps": "5-10 minutes",
+                "Rest": "0 seconds",
+                "Intensity": "Light cardio, such as walking"
             }
         ]
     },
     "Day 4": {
-        "Focus": "Rest or Active Recovery",
-        "Exercises": [
-            {
-                "Name": "Light stretching or yoga",
-                "Sets": 1,
-                "Reps": "30-45 minutes",
-                "Rest": "N/A",
-                "Intensity": "Low"
-            }
-        ]
-    },
-    "Day 5": {
-        "Focus": "Upper Body Strength",
-        "Exercises": [
-            {
-                "Name": "Incline Dumbbell Press",
-                "Sets": 3,
-                "Reps": "8-12",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Dumbbell Shoulder Press",
-                "Sets": 3,
-                "Reps": "8-12",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Pull-ups (or Lat Pulldowns)",
-                "Sets": 3,
-                "Reps": "As many as possible (or 8-12)",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Dips",
-                "Sets": 3,
-                "Reps": "As many as possible",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            }
-        ]
-    },
-    "Day 6": {
-        "Focus": "Lower Body Strength and Hamstring Focus",
-        "Exercises": [
-            {
-                "Name": "Glute Bridges",
-                "Sets": 3,
-                "Reps": "15-20",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Hamstring Curls",
-                "Sets": 3,
-                "Reps": "15-20",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Calf Raises",
-                "Sets": 3,
-                "Reps": "15-20",
-                "Rest": "60 seconds",
-                "Intensity": "Moderate"
-            },
-            {
-                "Name": "Good Mornings",
-                "Sets": 2,
-                "Reps": "15-20",
-                "Rest": "60 seconds",
-                "Intensity": "Light"
-            }
-        ]
-    },
-    "Day 7": {
         "Focus": "Rest",
         "Exercises": [
             {
@@ -184,7 +141,85 @@
                 "Sets": 1,
                 "Reps": "N/A",
                 "Rest": "N/A",
-                "Intensity": "N/A"
+                "Intensity": "Low"
+            }
+        ]
+    },
+    "Day 5": {
+        "Focus": "Speed and Strength Training",
+        "Exercises": [
+            {
+                "Name": "Warm-up",
+                "Sets": 1,
+                "Reps": "5-10 minutes",
+                "Rest": "0 seconds",
+                "Intensity": "Light cardio, such as jogging or jumping jacks"
+            },
+            {
+                "Name": "Hill sprints",
+                "Sets": 5,
+                "Reps": "50 meters",
+                "Rest": "2 minutes",
+                "Intensity": "High"
+            },
+            {
+                "Name": "Pull-ups",
+                "Sets": 3,
+                "Reps": "As many as possible",
+                "Rest": "60 seconds",
+                "Intensity": "Moderate"
+            },
+            {
+                "Name": "Bent-over rows",
+                "Sets": 3,
+                "Reps": "8-12",
+                "Rest": "60 seconds",
+                "Intensity": "Moderate"
+            },
+            {
+                "Name": "Hamstring stretches",
+                "Sets": 3,
+                "Reps": "30 seconds",
+                "Rest": "30 seconds",
+                "Intensity": "Low"
+            },
+            {
+                "Name": "Cool-down",
+                "Sets": 1,
+                "Reps": "5-10 minutes",
+                "Rest": "0 seconds",
+                "Intensity": "Light cardio, such as walking"
+            }
+        ]
+    },
+    "Day 6": {
+        "Focus": "Active Recovery and Flexibility",
+        "Exercises": [
+            {
+                "Name": "Yoga or swimming",
+                "Sets": 1,
+                "Reps": "30-45 minutes",
+                "Rest": "N/A",
+                "Intensity": "Low"
+            },
+            {
+                "Name": "Dynamic stretches",
+                "Sets": 1,
+                "Reps": "10-15 minutes",
+                "Rest": "N/A",
+                "Intensity": "Low"
+            }
+        ]
+    },
+    "Day 7": {
+        "Focus": "Long Run",
+        "Exercises": [
+            {
+                "Name": "Long run",
+                "Sets": 1,
+                "Reps": "45-60 minutes",
+                "Rest": "N/A",
+                "Intensity": "Moderate"
             }
         ]
     }
