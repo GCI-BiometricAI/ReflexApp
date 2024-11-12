@@ -1,17 +1,15 @@
 {
-    "name": "Brandon",
+    "csv": "Laps,Time,Cumulative Time,Distance,Avg Pace,Avg GAP,Avg HR,Max HR,Total Ascent,Total Descent,Avg Power,Avg W/kg,Max Power,Max W/kg,Avg Run Cadence,Avg Ground Contact Time,Avg GCT Balance,Avg Stride Length,Avg Vertical Oscillation,Avg Vertical Ratio,Calories,Avg Temperature,Best Pace,Max Run Cadence,Moving Time,Avg Moving Pace\n1,0:41.8,0:41.8,0.25,2:47,--,96,101,0,0,--,--,--,--,155,--,--,3.73,--,--,3,75.2,1:37,247,0:30,2:00\n2,1:00.3,1:42.1,0.25,4:01,--,121,143,0,0,--,--,--,--,152,--,--,2.63,--,--,8,75.2,2:20,239,0:40,2:40\n3,0:10.1,1:52.1,0.04,3:59,--,143,144,0,0,--,--,--,--,220,--,--,1.83,--,--,2,75.2,3:32,236,0:09,3:34\nSummary,1:52.1,1:52.1,0.54,3:27,,113,144,0,0,,,,,159,,,2.97,,,13,75.2,1:37,247,1:19,2:26\n",
+    "name": "Brandon Foley",
     "weight": "70",
     "height": "180",
     "age": "19",
     "sex": "Male",
-    "shoulder_width": -19.54285714285714,
-    "hip_width": -10.799999999999999,
     "bmi": 21.604938271604937,
-    "shoulder_hip_ratio": 1.9,
-    "goals": "lose weight",
-    "problems": "hamstring",
-    "experince": "6 years",
-    "time": "7 days",
+    "goals": "gain speed and stregth",
+    "problems": "right hamstring",
+    "experince": "5 years",
+    "time": "all",
     "access": "all",
     "preference": "any"
 }

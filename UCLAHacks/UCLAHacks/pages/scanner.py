@@ -4,6 +4,7 @@ from UCLAHacks import styles
 import reflex as rx
 import json
 import csv
+from pathlib import Path
 
 def button_style(selected):
     active_border_color = f"1px solid {rx.color('accent', 6)}"  # Active color
@@ -41,8 +42,6 @@ class InputState(rx.State):
     image: bool = False
     sex: str = ""
     name: str = ""
-    shoulderWidth = ""
-    hipWidth = ""
     goals = ""
     problems = ""
     experince = ""
@@ -71,11 +70,8 @@ class InputState(rx.State):
     def updateName(self, value):
         self.name=value
     
-    def updateShoulderWidth(self, value):
-        self.shoulderWidth = value
-    
-    def updateHipWidth(self,value):
-        self.hipWidth = value
+    def updateCSV(self, value):
+        self.csv = value
     
     def updateGoals(self,value):
         self.goals = value
@@ -95,46 +91,44 @@ class InputState(rx.State):
     def updatePrefrence(self, value):
         self.preference = value
     
+    # @rx.event
+    async def handle_upload(
+        self, files: list[rx.UploadFile]
+    ):
+        """Handle the upload of file(s).
+
+        Args:
+            files: The uploaded files.
+        """
+        for file in files:
+            upload_data = await file.read()
+            custom_filename = f"data{Path(file.filename).suffix}"
+            outfile = rx.get_upload_dir() / custom_filename
+
+            # Save the file.
+            with outfile.open("wb") as file_object:
+                file_object.write(upload_data)
+    
     def convertToJson(self):
         
-                # Initialize variables to store the values
-        right_shoulder_x = None
-        left_shoulder_x = None
-        right_hip_x = None
-        left_hip_x = None
-
-        # Open the CSV file and read its contents
-        with open('../UCLAHacks/UCLAHacks/data.csv', mode='r') as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                # Check the dataPoint and assign values accordingly
-                if row['dataPoint'] == 'RightShoulder':
-                    right_shoulder_x = int(row['x'])
-                elif row['dataPoint'] == 'LeftShoulder':
-                    left_shoulder_x = int(row['x'])
-                elif row['dataPoint'] == 'RightHip':
-                    right_hip_x = int(row['x'])
-                elif row['dataPoint'] == 'LeftHip':
-                    left_hip_x = int(row['x'])
-                
-        CmPerPixel = int(self.height)/350
-        print("CM per pixels are: " + str(CmPerPixel))
-        self.shoulderWidth = (left_shoulder_x-right_shoulder_x)*CmPerPixel
-        print("The width of your shoulders is: " + str(self.shoulderWidth*CmPerPixel))
-        self.hipWidth = (left_hip_x-right_hip_x)*CmPerPixel
-        print("The width of your hips is: " + str(self.hipWidth*CmPerPixel))
+        def csv_to_string(csv_file_path):
+            with open(csv_file_path, 'r') as file:
+                csv_reader = csv.reader(file)
+                csv_string = ""
+                for row in csv_reader:
+                    csv_string += ','.join(row) + '\n'
+            return csv_string
         
+        csv_string = csv_to_string('../UCLAHacks/uploaded_files/data.csv')
         
         data = {
+            "csv": csv_string,
             "name": self.name,
             "weight": self.weight,
             "height": self.height,
             "age": self.age,
             "sex": self.sex,
-            "shoulder_width": self.shoulderWidth,
-            "hip_width": self.hipWidth,
             "bmi": float(int(self.weight) / (pow((int(self.height) / 100),2))),
-            "shoulder_hip_ratio": (int(self.shoulderWidth)/int(self.hipWidth)),
             "goals": self.goals,
             "problems": self.problems,
             "experince": self.experince,
@@ -223,21 +217,39 @@ def image_upload():
         spacing="3",
     )
 """
+color = "rgb(107,99,246)"
 
 def csv_upload():
-    return rx.upload(
-        rx.text("Upload CSV File", align="center"),
-        rx.icon(tag="upload"),
-        accept={"fileTypes": [".csv"]},  # Only accept CSV files
-        style={
-            "padding": "1em",
-            "border": "1px solid #ccc",
-            "border-radius": "5px",
-            "width": "100%",
-            "text-align": "center",
-            "cursor": "pointer",
-        }
-    )
+    return rx.vstack(
+            rx.upload(
+                rx.vstack(
+                    rx.button(
+                        "Select File",
+                        color=color,
+                        bg="white",
+                        border=f"1px solid {color}",
+                    ),
+                    rx.text(
+                        "Drag and drop files here or click to select files"
+                    ),
+                ),
+                id="upload1",
+                border=f"1px dotted {color}",
+                padding="5em",
+            ),
+            rx.hstack(
+                rx.foreach(
+                    rx.selected_files("upload1"), rx.text
+                )
+            ),
+            rx.button(
+                "Upload",
+                on_click=InputState.handle_upload(
+                    rx.upload_files(upload_id="upload1")
+                ),
+            ),
+            padding="5em",
+        )
 
 @template(route="/scanner", title="Scanner")
 def scanner() -> rx.Component:
