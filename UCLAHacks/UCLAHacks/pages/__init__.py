@@ -4,3 +4,4 @@ from .scanner import scanner
 # from .camera import camera
 from .Program import Program
 from .Schedule import Schedule
+from .tutorial import tutorial
