@@ -8,7 +8,7 @@ def introduction_text() -> rx.Component:
     """Component displaying introductory text about the system."""
     return rx.box(
         rx.text("Welcome to Your Personal Fitness Assistant!", size="6", align="center"),
-        rx.text("We use advanced AI to analyze your body and provide customized workout plans.", align="center"),
+        rx.text("We use advanced AI to analyze your previous workout to produce recommend future workouts!", align="center"),
         rx.text("Start by going to the Upload Section to upload your workout and more!", align="center"),
         spacing="3",
         style={"width": "100%"},

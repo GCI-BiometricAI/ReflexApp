@@ -244,6 +244,7 @@ def csv_upload():
                 id="upload1",
                 border=f"1px dotted {color}",
                 padding="5em",
+                accept={"data/csv": [".csv"]}
             ),
             rx.hstack(
                 rx.foreach(
