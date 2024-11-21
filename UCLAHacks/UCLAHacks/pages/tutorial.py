@@ -5,7 +5,7 @@ from UCLAHacks.templates import ThemeState, template
 import reflex as rx
 
 
-@template(route="/tutorial", title="tutorial")
+@template(route="/tutorial", title="How to get your CSV")
 def tutorial() -> rx.Component:
     """The settings page.
 

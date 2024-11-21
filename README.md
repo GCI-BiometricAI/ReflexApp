@@ -11,7 +11,11 @@ Welcome to Alara! This project is a website designed to help users achieve their
 - Reflex: For handling parameter inputs, image uploads, and design
 
 ## Team Members:
-- Brandon Foley
+- Brandon - scanner and index
+- Nikoali - Program
+- Daniel - Schedule
+- Micheal - settings
+- Luca - tutorial and index
 
 ## Installation Guide:
 ### Prerequisities:
