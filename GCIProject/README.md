@@ -4,7 +4,6 @@
 Welcome to Alara! This project is a website designed to help users achieve their fitness goals through personalized workout plans generated using AI technology. The website utilizes Reflex to handle parameter inputs and image uploads, allowing users to receive tailored workout recommendations based on their previous workout.
 
 ## Key Features:
-- Advanced Body Analysis: Upload images for real-time body analysis using state-of-the-art computer vision techniques.
 - Personalized Workout Plans: Get workout recommendations tailored to your body type and fitness goals.
 
 ## Technologies Used:
@@ -24,7 +23,7 @@ Welcome to Alara! This project is a website designed to help users achieve their
 ### Setup Instructions
 1. Clone the repository
    ```
-   git clone https://github.com/brfoley/UCLA_HACK.git
+   git clone https://github.com/GCI-BiometricAI/ReflexApp.git
    ```
 3. Navigate to the project directory: cd GCIProject
    ```
