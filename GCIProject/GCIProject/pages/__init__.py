@@ -5,3 +5,4 @@ from .scanner import scanner
 from .Program import Program
 from .Schedule import Schedule
 from .tutorial import tutorial
+from .chatbot import chatbot
